@@ -1,0 +1,14 @@
+stages:
+- name: run
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm i
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run start
+  when:
+    branch:
+      include:
+      - master
+timeout: 60
