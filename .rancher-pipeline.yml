@@ -1,14 +1,10 @@
 stages:
-- name: run
+- name: run-node
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: npm i
-  - runScriptConfig:
-      image: node:latest
-      shellScript: npm run start
-  when:
-    branch:
-      include:
-      - master
+      shellScript: |-
+        pwd
+        ls
+        cd antd-admin
 timeout: 60
