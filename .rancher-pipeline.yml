@@ -7,4 +7,7 @@ stages:
         pwd
         ls
         node -v
+        cat package.json
+        npm i
+        npm start
 timeout: 60
