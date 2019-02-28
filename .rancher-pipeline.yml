@@ -6,5 +6,5 @@ stages:
       shellScript: |-
         pwd
         ls
-        cd antd-admin
+        node -v
 timeout: 60
