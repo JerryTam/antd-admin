@@ -8,6 +8,13 @@ stages:
         ls
         node -v
         cat package.json
-        npm i
-        npm start
+  - runScriptConfig:
+      image: node:latest
+      shellScript: |-
+        npm i pm2 cnpm -g
+        cnpm i
+        pm2 -v
+        npm run build
+        cd ./dist
+        ls
 timeout: 60
